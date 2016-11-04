@@ -1,5 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe "authors/new.html.erb", type: :view do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "Should have First name Field" do
+    render :template =>"authors/index.html.erb"
+    expect(rendered).to have_field('First_name')
+  end
 end
