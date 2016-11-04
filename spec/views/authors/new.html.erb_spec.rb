@@ -13,4 +13,8 @@ RSpec.describe "authors/new.html.erb", type: :view do
     render :template =>"authors/new.html.erb"
     expect(rendered).to have_field('Homepage')
   end
+  it "Should have Create Author Submit Button" do
+    render :template =>"authors/new.html.erb"
+    expect(rendered).to have_button('Create author')
+  end
 end
