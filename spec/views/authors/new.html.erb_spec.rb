@@ -15,6 +15,6 @@ RSpec.describe "authors/new.html.erb", type: :view do
   end
   it "Should have Create Author Submit Button" do
     render :template =>"authors/new.html.erb"
-    expect(rendered).to have_button('Create author')
+    expect(rendered).to have_button('Create Author')
   end
 end
