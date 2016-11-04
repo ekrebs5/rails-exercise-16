@@ -1,8 +1,8 @@
 FactoryGirl.define do
   factory :author do
-    firstName "MyString"
-lastName "MyString"
-homepage "MyString"
+    firstName "Alan"
+    lastName "Turing"
+    homepage "http://wikipedia.org/Alan_Turing"
   end
 
 end

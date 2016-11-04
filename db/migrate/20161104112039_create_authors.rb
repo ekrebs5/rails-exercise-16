@@ -6,6 +6,7 @@ class CreateAuthors < ActiveRecord::Migration
       t.string :homepage
 
       t.timestamps null: false
+
     end
   end
 end
