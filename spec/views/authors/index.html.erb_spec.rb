@@ -18,4 +18,8 @@ RSpec.describe "authors/index.html.erb", type: :view do
   it "Should display link to new author page" do
     expect(rendered).to have_css('a', :text => 'Add author')
   end
+
+  it "Should link to edit author page" do
+    expect(rendered).to have_css('a', :text => 'Edit')
+  end
 end
