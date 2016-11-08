@@ -10,7 +10,8 @@ RSpec.describe AuthorsController, type: :controller do
   end
   describe "GET #show" do
     it "returns http success" do
-      get :show, id:1
+      @author = create(:author)
+      get :show, id: @author.id
       expect(response).to have_http_status(:success)
     end
   end
