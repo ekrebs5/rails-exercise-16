@@ -5,7 +5,7 @@ class AuthorsController < ApplicationController
   def create
     @author = Author.new(author_params)
     @author.save
-    redirect_to new_author_path
+    redirect_to @author
   end
 
   def show
@@ -13,6 +13,7 @@ class AuthorsController < ApplicationController
   end
 
   def index
+    @authors = Author.all()
   end
 
   private
