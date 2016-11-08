@@ -1,0 +1,52 @@
+﻿test for #14
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#	modified:   .gitignore
+#	modified:   .rspec
+#	modified:   .travis.yml
+#	modified:   Gemfile
+#	modified:   Gemfile.lock
+#	modified:   LICENSE
+#	modified:   README.md
+#	modified:   Rakefile
+#	modified:   Vagrantfile
+#	modified:   bin/bundle
+#	modified:   bin/rails
+#	modified:   bin/rake
+#	modified:   bin/setup
+#	modified:   bin/spring
+#	modified:   config.ru
+#	modified:   config/application.rb
+#	modified:   config/boot.rb
+#	modified:   config/database.yml
+#	modified:   config/environment.rb
+#	modified:   config/environments/development.rb
+#	modified:   config/environments/production.rb
+#	modified:   config/environments/test.rb
+#	modified:   config/initializers/assets.rb
+#	modified:   config/initializers/backtrace_silencers.rb
+#	modified:   config/initializers/cookies_serializer.rb
+#	modified:   config/initializers/filter_parameter_logging.rb
+#	modified:   config/initializers/inflections.rb
+#	modified:   config/initializers/mime_types.rb
+#	modified:   config/initializers/session_store.rb
+#	modified:   config/initializers/wrap_parameters.rb
+#	modified:   config/locales/en.yml
+#	modified:   config/routes.rb
+#	modified:   config/secrets.yml
+#	modified:   db/schema.rb
+#	modified:   public/404.html
+#	modified:   public/422.html
+#	modified:   public/500.html
+#	modified:   public/robots.txt
+#	modified:   spec/controllers/authors_controller_spec.rb
+#	modified:   travis/check.txt
+#	modified:   travis/requirements.txt
+#	modified:   travis/try_issues.py
+#
+
