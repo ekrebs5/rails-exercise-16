@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "New Author page", :type => :feature do
+describe "Author page", :type => :feature do
 
   it "Saves the author" do
     visit new_author_path
@@ -17,5 +17,13 @@ describe "New Author page", :type => :feature do
     fill_in "author_homepage", with: "http://wikipedia.org/Alan_Turing"
     click_button "Create Author"
     expect(page).to have_text("Last name can't be blank")
+  end
+
+  it "Edit page should save changes" do
+    @author = create(:author)
+    visit edit_author_path(id: @author.id)
+    fill_in "author_last_name", with: "Mathison"
+    click_button "Save author"
+    expect(page).to have_text("Last name: Mathison")
   end
 end

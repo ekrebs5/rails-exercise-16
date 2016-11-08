@@ -16,7 +16,7 @@ RSpec.describe "authors/edit.html.erb", type: :view do
   it "Should have Homepage Field" do
     expect(rendered).to have_field('Homepage')
   end
-  it "Should have Create Author Submit Button" do
+  it "Should have Save Author Submit Button" do
     expect(rendered).to have_button('Save author')
   end
 end
