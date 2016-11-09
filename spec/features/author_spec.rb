@@ -26,4 +26,11 @@ describe "Author page", :type => :feature do
     click_button "Save author"
     expect(page).to have_text("Last name: Mathison")
   end
+
+  it "Destroys/Deletes the author" do
+    @author = create(:author)
+    visit authors_path
+    click_link "Destroy"
+    expect(Author.find_by(id: @author.id)).to be_nil
+  end
 end
