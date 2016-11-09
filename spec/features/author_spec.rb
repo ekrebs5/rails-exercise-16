@@ -22,9 +22,10 @@ describe "Author page", :type => :feature do
   it "Edit page should save changes" do
     @author = create(:author)
     visit edit_author_path(id: @author.id)
-    fill_in "author_last_name", with: "Mathison"
+    # the guys name is Alan Mathison Turing
+    fill_in "author_first_name", with: "Alan Mathison"
     click_button "Save author"
-    expect(page).to have_text("Last name: Mathison")
+    expect(page).to have_text("First name: Alan Mathison")
   end
 
   it "Destroys/Deletes the author" do
