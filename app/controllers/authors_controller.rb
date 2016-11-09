@@ -3,6 +3,11 @@ class AuthorsController < ApplicationController
     @author = Author.new
   end
 
+  def destroy
+    Author.find(params[:id]).destroy
+    redirect_to authors_path
+  end
+
   def create
     @author = Author.new(author_params)
     if (@author.save)
