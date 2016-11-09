@@ -22,4 +22,9 @@ RSpec.describe "papers/index", type: :view do
     assert_select "tr>td", :text => "Venue".to_s, :count => 2
     assert_select "tr>td", :text => 1.to_s, :count => 2
   end
+
+  it "should have link to new paper pager" do
+    render
+    expect(rendered).to have_css('a', "Add paper")
+  end
 end
