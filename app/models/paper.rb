@@ -5,5 +5,5 @@ class Paper < ActiveRecord::Base
 
     has_and_belongs_to_many(:authors)
 
-    scope :year, ->(ayear) { where("created_at = ?", ayear) }
+    scope :year, -> (year) { where("year = ?", year) }
 end
