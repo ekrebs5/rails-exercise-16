@@ -7,6 +7,8 @@ RSpec.describe "papers/edit", type: :view do
       :venue => "MyString",
       :year => 1
     ))
+
+    assign(:authors, Author.all)
   end
 
   it "renders the edit paper form" do
@@ -20,5 +22,14 @@ RSpec.describe "papers/edit", type: :view do
 
       assert_select "input#paper_year[name=?]", "paper[year]"
     end
+  end
+
+  it "Should have all five author boxes" do
+    render
+    expect(rendered).to have_select("paper_author_id_1")
+    expect(rendered).to have_select("paper_author_id_2")
+    expect(rendered).to have_select("paper_author_id_3")
+    expect(rendered).to have_select("paper_author_id_4")
+    expect(rendered).to have_select("paper_author_id_5")
   end
 end
