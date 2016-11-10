@@ -2,11 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "papers/edit", type: :view do
   before(:each) do
-    @paper = assign(:paper, Paper.create!(
-      :title => "MyString",
-      :venue => "MyString",
-      :year => 1
-    ))
+    @paper = assign(:paper, create(:paper))
 
     assign(:authors, Author.all)
   end
@@ -32,4 +28,10 @@ RSpec.describe "papers/edit", type: :view do
     expect(rendered).to have_select("paper_author_id_4")
     expect(rendered).to have_select("paper_author_id_5")
   end
+
+  it "Should preselectedly show author when the author is already given" do
+    render
+    expect(rendered).to have_select("paper_author_id_1", selected: 'Alan Turing')
+  end
+
 end
