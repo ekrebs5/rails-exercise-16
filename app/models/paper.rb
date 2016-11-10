@@ -4,4 +4,6 @@ class Paper < ActiveRecord::Base
     validates :year, presence: true, numericality: { only_integer: true }
 
     has_and_belongs_to_many(:authors)
+
+    scope :year, ->(ayear) { where("created_at = ?", ayear) }
 end
